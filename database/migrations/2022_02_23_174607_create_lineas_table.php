@@ -18,7 +18,6 @@ return new class extends Migration
             $table->foreignId('pedido_id')->constrained('pedidos');
             $table->foreignId('articulo_id')->constrained('articulos');
             $table->integer('cantidad');
-            $table->decimal('total',6,2);
             $table->timestamps();
         });
     }
