@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreArticuloRequest;
 use App\Http\Requests\UpdateArticuloRequest;
 use App\Models\Articulo;
+use Illuminate\Support\Facades\DB;
 
 class ArticuloController extends Controller
 {
@@ -15,7 +16,10 @@ class ArticuloController extends Controller
      */
     public function index()
     {
-        //
+        $articulos = DB::select('select * from articulos');
+        return view('index', [
+            'articulos' => $articulos,
+        ]);
     }
 
     /**

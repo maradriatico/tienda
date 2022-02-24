@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
 use App\Models\Pedido;
+use Illuminate\Support\Facades\Auth;
 
 class PedidoController extends Controller
 {
@@ -15,7 +16,9 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        //
+        return view('index', [
+            'pedidos' => Auth::user()->pedidos,
+        ]);
     }
 
     /**
