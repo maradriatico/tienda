@@ -16,7 +16,8 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        return view('index', [
+        //dd(Auth::user());
+        return view('index-usuario', [
             'pedidos' => Auth::user()->pedidos,
         ]);
     }

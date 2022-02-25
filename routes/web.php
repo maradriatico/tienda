@@ -25,6 +25,6 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-//Route::get('/index', [ArticuloController::class, 'index']);
+Route::get('/articulos', [ArticuloController::class, 'index']);
 
-Route::get('/index', [PedidoController::class, 'index']);
+Route::get('/pedidos', [PedidoController::class, 'index']);
