@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex flex-col items-center mt-4">
-            <h1 class="mb-4 text-2xl font-semibold">Articulos</h1>
+            <h1 class="mb-4 text-2xl font-semibold">Carrito</h1>
             <div class="border border-gray-200 shadow">
                 <table>
                     <thead class="bg-gray-50">
@@ -16,7 +16,10 @@
                                 Categoria
                             </th>
                             <th class="px-6 py-2 text-xs text-gray-500">
-                                Editar
+                                Meh
+                            </th>
+                            <th class="px-6 py-2 text-xs text-gray-500">
+                                Borrar
                             </th>
                         </tr>
                     </thead>
@@ -39,16 +42,13 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <form action="/carrito" method="POST">
-                                        @csrf @method('POST')
-                                    </form>
                                     <a href="#"
-                                        class="px-4 py-1 text-sm text-white bg-blue-400 rounded">Añadir al carrito</a>
+                                        class="px-4 py-1 text-sm text-white bg-green-400 rounded">+</a>
                                 </td>
-                                {{--<td class="px-6 py-4">
+                                <td class="px-6 py-4">
                                     <a href="#"
                                         class="px-4 py-1 text-sm text-white bg-red-400 rounded">Borrar</a>
-                                </td>--}}
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>

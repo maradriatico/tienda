@@ -28,3 +28,5 @@ require __DIR__.'/auth.php';
 Route::get('/articulos', [ArticuloController::class, 'index']);
 
 Route::get('/pedidos', [PedidoController::class, 'index']);
+
+Route::post('/carrito', [PedidoController::class, 'agregar']);
