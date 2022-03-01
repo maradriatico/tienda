@@ -9,14 +9,14 @@ class CarritoController extends Controller
 {
     public function index()
     {
-        return view('index', [
+        return view('carrito', [
             'articulos' => Articulo::all()
         ]);
     }
 
-    public function añadir(Request $Articulo){
-
+    public function agregar(Articulo $id){
+        //dd($id);
         return redirect()->back()
-            ->with('success', 'Empleado borrado correctamente');
+            ->with('success', 'Articulo borrado correctamente');
     }
 }

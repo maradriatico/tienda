@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePedidoRequest;
 use App\Http\Requests\UpdatePedidoRequest;
+use App\Models\Articulo;
 use App\Models\Pedido;
 use Illuminate\Support\Facades\Auth;
 
@@ -86,5 +87,11 @@ class PedidoController extends Controller
     public function destroy(Pedido $pedido)
     {
         //
+    }
+
+    public function agregar(Articulo $id){
+        //dd($id);
+        return redirect()->back()
+            ->with('success', 'Articulo añadido correctamente');
     }
 }

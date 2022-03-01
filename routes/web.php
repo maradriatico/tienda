@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ArticuloController;
+use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\PedidoController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,6 @@ require __DIR__.'/auth.php';
 
 Route::get('/articulos', [ArticuloController::class, 'index']);
 
-Route::get('/pedidos', [PedidoController::class, 'index']);
+Route::get('/pedidos', [PedidoController::class, 'index'])->middleware(['auth'])->name('dashboard');
 
-Route::post('/carrito', [PedidoController::class, 'agregar']);
+Route::get('/carrito/{id}', [PedidoController::class, 'agregar']);

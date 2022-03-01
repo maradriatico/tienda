@@ -1,5 +1,5 @@
-<x-app-layout>
-    <x-slot name="header">
+<x-guest-layout>
+
         <div class="flex flex-col items-center mt-4">
             <h1 class="mb-4 text-2xl font-semibold">Articulos</h1>
             <div class="border border-gray-200 shadow">
@@ -39,11 +39,11 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
-                                    <form action="/carrito" method="POST">
-                                        @csrf @method('POST')
-                                    </form>
-                                    <a href="#"
-                                        class="px-4 py-1 text-sm text-white bg-blue-400 rounded">Añadir al carrito</a>
+
+                                        <a href="/carrito/{{ $articulo->id}}"
+                                            class="px-4 py-1 text-sm text-white bg-blue-400 rounded">Añadir al carrito</a>
+
+
                                 </td>
                                 {{--<td class="px-6 py-4">
                                     <a href="#"
@@ -58,5 +58,5 @@
                 </div>
             </div>
         </div>
-    </x-slot>
-</x-app-layout>
+
+</x-guest-layout>
